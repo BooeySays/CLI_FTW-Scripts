@@ -1,0 +1,19 @@
+#!/bin/bash
+
+. /home/back/.scripts/colors/color-on
+
+alias Service_Com="
+echo "(Just because... Entries are case sensitive..  But mostly because I am too lazy.. "
+echo " "
+echo -e "\e[01;31;40m[${cCLR}\e[01;37;40mS${cCLR}\e[01;31;40m]${cCLR}\e[01;32;40mtop${cCLR}    \e[01;31;40m[\e[01;37;40mR\e[01;31;40m]${cCLR}\e[01;32;40mestart${cCLR}    \e[01;31;40m[\e[01;37;40mB\e[01;31;40m]${cCLR}\e[01;32;40mack${cCLR}    \e[01;31;40m[\e[01;37;40mQ\e[01;31;40m]${cCLR}\e[01;32;40muit${cCLR}"
+echo " "
+echo " "
+echo "Now what ???"
+read -p " :  " -n 1 -r NEXT
+case $NEXT in
+	Ss)
+	
+echo " "
+echo
+
+. /home/back/.scripts/colors/color-off

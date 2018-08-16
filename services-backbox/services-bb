@@ -1,0 +1,105 @@
+#!/bin/bash
+
+alias LAUNCH_SERV="systemctl $SARG $SERVICE_CHECK"
+echo SERVICES::
+echo " "
+echo " "
+echo "[1] 	Apache"
+echo " "
+echo "[2] 	Bluetooth"
+echo " "
+echo "[3] 	Logkeys"
+echo " "
+echo "[4]  	Network-Manager"
+echo " "
+echo "[5]	Polipo"
+echo " "
+echo "[6] 	SSH"
+echo " "
+echo "[7]	Tor"
+echo " "
+echo "[A]ll"
+echo " "
+echo "[Q]uit"
+echo " "
+echo " "
+echo "Select a service"
+read -p " # " -n 1 -r SERVICESS
+
+case "$SERVICESS" in
+	1)
+	clear
+	SERVICE_CHECK='apache2'
+	SARG='status'
+	echo "APACHE"
+	echo " "
+	echo " "
+	LAUNCH_SERV
+	unset SARG
+	unset SERVICE_CHECK
+	;;
+	2)
+	SERVICE_CHECK='bluetooth'
+	SARG='status'
+	echo "BLUETOOTH"
+	echo " "
+	echo " "
+	systemctl status bluetooth | more
+	unset SARG
+	unset SERVICE_CHECK
+	;;
+	3)
+	clear
+	SARG='status'
+	SERVICE_CHECK='logkey'
+	echo "LOGKEY"
+	echo " "
+	echo " "
+	echo "Status for LOGKEY is unavailible"
+	#systemctl status apache2 | more
+	unset SARG
+	unset SERVICE_CHECK
+	;;
+	4)
+	SARG='status'
+	SERVICE_CHECK='network-manager'
+	echo "NETWORK-MANAGER"
+	echo " "
+	echo " "
+	systemctl status $SERVICE_CHECK | more
+	unset SARG
+	unset SERVICE_CHECK
+	;;
+	5)
+	SARG='status'
+	clear
+	echo "POLIPO"
+	echo " "
+	echo " "
+	systemctl status apache2 | more
+	unset SARG
+	unset SERVICE_CHECK
+	;;
+	6)
+	SARG='status'
+	SERVICE_CHECK='ssh'
+	echo "SSH"
+	echo " "
+	echo " "
+	systemctl status ssh | more
+	unset SARG
+	unset SERVICE_CHECK
+	;;
+	7)
+	SARG='status'
+	SERVICE_CHECK='tor'
+	echo "TOR"
+	echo " "
+	echo " "
+	sh -c "systemctl status $SERVICE_CHECK; echo; ${SHELL:-bash}"
+	unset SERVICE_CHECK
+	unset SARG
+	;;
+esac
+
+#echo $Command
