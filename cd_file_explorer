@@ -1,0 +1,18 @@
+#!/bin/bash
+
+CDFILEEX(){
+cd "$1";
+clear;
+echo -e "\[\e[33m\][\[\e[m\] 👤 \[\e[32m\]\u\[\e[m\] \[\e[33m\]]\[\e[m\] \[\e[33m\][\[\e[m\] 💻 \[\e[32m\]\h\[\e[m\] \[\e[33m\]]\[\e[m\] ";
+echo -e " ";
+echo -e "\e[36m\][ 📁 \e[33m$PWD \e[36m]\e[00m ";
+echo -e "Current DIRECTOERY is: $PWD";
+echo " ";
+echo " ";
+ls --group-directories-first --block-size=KB --color=always -Fhxva | lrdd -R;
+echo " ";
+echo -e "TEST 2"
+echo -e "\[\e[36m\][\[\e[m\] 📁 \[\e[33m\]\w\[\e[m\] \[\e[36m\]]\[\e[m\] ";
+echo "$PWD";
+echo -e "%t";
+}
