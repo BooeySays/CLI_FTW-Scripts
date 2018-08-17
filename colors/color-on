@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# COLORS
+
+cWHITE='\e[37m'
+cRED='\e[31m'
+cGREEN='\e[32m'
+cYELLOW='\e[33m'
+cBLUE='\e[34m'
+cPINK='\e[35m'
+cAQUA='\e[36m'
+
+cBWHITE='\e[01;37m'
+cBRED='\e[01;31m'
+cBGREEN='\e[01;32m'
+cBYELLOW='\e[01;33m'
+cBBLUE='\e[01;34m'
+cBPINK='\e[01;35m'
+cBAQUA='\e[01;36m'
+
+cCLR='\e[00m'

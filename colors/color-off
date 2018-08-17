@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# COLORS
+
+unset cWHITE
+unset cRED
+unset cGREEN
+unset cYELLOW
+unset cBLUE
+unset cPINK
+unset cAQUA
+unset cBWHITE
+unset cBRED
+unset cBGREEN
+unset cBYELLOW
+unset cBBLUE
+unset cBPINK
+unset cBAQUA
+unset cCLR
